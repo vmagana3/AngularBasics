@@ -1,0 +1,28 @@
+<p>Datos del Empleado</p>
+<li>Nombre del empleado: {{nombreEmpleado}}</li>
+<li>Apellido del empleado: {{apellidoEmpleado}}</li>
+<li>Edad del empleado: {{edadEmpleado}}</li>
+<li>Empresa del empleado: {{empresaEmpleado}}</li>
+
+<br>
+
+
+<label>Nombre de la empresa:</label>
+<input #empresaInput type="text" [(ngModel)]="empresaEmpleado">
+<!--input #empresaInput type="text" [disabled]="habilitacionCuadro" /-->
+<br>
+<!--button (click)="validarEmpresa(empresaInput.value)">Validar</button-->
+
+<br>
+<br>
+<br>
+
+Registrado<input value="registrado" type="radio" name="nRegistro" [checked]="usuarioLogueado" (click)="setUsuarioRegistrado($event)">
+<br>
+No Registrado<input value="noRegistrado" type="radio" name="nRegistro" (click)="setUsuarioRegistrado($event)">
+
+<br>
+<br>
+<br>
+
+<p>{{textoUsuarioLogueado}}</p>
